@@ -1,0 +1,231 @@
+/* 
+   EchoX Media Professional Responsive Engine 2.1
+   Designed for 100% responsiveness across all modern devices.
+*/
+
+/* --- Global Professional Resets --- */
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Responsive Typography System --- */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3rem !important;
+    }
+
+    .display-3 {
+        font-size: 2.5rem !important;
+    }
+
+    .display-4 {
+        font-size: 2.2rem !important;
+    }
+
+    .footer-brand {
+        font-size: 3.5rem !important;
+    }
+}
+
+/* --- Large Desktop & Ultrawide (1400px +) --- */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* --- Tablets & Small Desktops (992px to 1199px) --- */
+@media (max-width: 1199px) {
+    .navbar {
+        padding: 1.5rem !important;
+    }
+
+    .mapmaker-card {
+        top: -5%;
+        left: -5%;
+        max-width: 350px;
+    }
+}
+
+/* --- Small Tablets (768px to 991px) --- */
+@media (max-width: 991px) {
+    .pt-custom-header {
+        padding-top: 120px !important;
+    }
+
+    .section-padding {
+        padding: 80px 0 !important;
+    }
+
+    /* About Section Overhaul */
+    .mapmaker-card {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        max-width: 100% !important;
+        transform: rotate(0) !important;
+        margin-bottom: -40px;
+        z-index: 5;
+    }
+
+    .team-image-wrapper {
+        width: 100% !important;
+        margin-top: 20px;
+    }
+
+    /* Stats System */
+    #stats .counter {
+        font-size: 4rem !important;
+    }
+
+    /* Service Grid (2x2) */
+    .service-card-v3 {
+        min-height: 480px !important;
+    }
+}
+
+/* --- Mobile Devices (Up to 767px) --- */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 1rem !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem !important;
+    }
+
+    .hero-section {
+        min-height: 85vh;
+    }
+
+    .hero-title br {
+        display: none;
+    }
+
+    /* Flatten title on mobile */
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+        margin-bottom: 2rem !important;
+        padding: 0 10px;
+    }
+
+    .btn-custom-lg {
+        width: 100%;
+        padding: 15px !important;
+    }
+
+    /* Swiper Mobile Polish */
+    .workSwiper .swiper-slide {
+        width: 100% !important;
+        max-width: 320px;
+    }
+
+    .work-img {
+        height: 400px !important;
+    }
+
+    /* Stats to 1 Col */
+    #stats .col-md-4 {
+        margin-bottom: 40px;
+    }
+
+    #stats .col-md-4:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Footer Mobile Alignment */
+    footer {
+        text-align: center !important;
+    }
+
+    .footer-brand {
+        margin-top: 40px !important;
+        text-align: center !important;
+        display: block;
+    }
+
+    .social-links {
+        justify-content: center !important;
+        margin-bottom: 30px;
+    }
+
+    .custom-footer-bg {
+        padding: 40px 15px !important;
+        border-radius: 30px !important;
+    }
+
+    /* Modal System */
+    .modal-dialog {
+        margin: 0.5rem !important;
+    }
+
+    .modal-left-panel {
+        display: none !important;
+    }
+
+    .modal-body .p-5,
+    .col-lg-7.p-5 {
+        padding: 2rem !important;
+    }
+
+    .btn-close-custom {
+        top: 20px;
+        right: 20px;
+        position: absolute;
+    }
+}
+
+/* --- Very Small Devices (Under 400px) --- */
+@media (max-width: 400px) {
+
+    .display-1,
+    .hero-title {
+        font-size: 2rem !important;
+    }
+
+    .card-body-custom {
+        padding: 0 20px 30px !important;
+    }
+
+    .card-number {
+        font-size: 5rem !important;
+    }
+
+    .service-card-v3 {
+        min-height: 420px !important;
+    }
+
+    .footer-brand {
+        font-size: 2.8rem !important;
+    }
+}
+
+/* --- Touch Surface Polish --- */
+@media (pointer: coarse) {
+    .nav-link {
+        padding: 15px 0 !important;
+    }
+
+    .btn {
+        min-height: 48px;
+    }
+
+    /* Mobile tap targets */
+}
+
+/* --- Advanced CSS Polish --- */
+.bg-dark-glass {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+.pro-container {
+    max-width: 100%;
+    overflow-x: hidden;
+}

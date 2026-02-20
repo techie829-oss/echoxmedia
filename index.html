@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoX Media | Influencer Marketing Agency</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivestyle.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top p-4" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold fs-3" href="#">EchoX Media<span
+                    class="text-primary-custom">.</span></a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-4">
+                    <li class="nav-item"><a class="nav-link text-white active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="our-story.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="what-we-do.html">What we do</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="our-work.html">Our Work</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="our-blogs.html">Our Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="career.html">Career</a></li>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal"
+                        class="btn btn-custom rounded-pill px-4 py-2">Let's Talk <i
+                            class="fas fa-arrow-right ms-2"></i></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="hero-section d-flex align-items-center justify-content-center text-center position-relative overflow-hidden">
+        <div class="hero-bg-gradient"></div>
+        <div class="container position-relative z-1">
+            <h1 class="display-1 fw-bold mb-4 hero-title">
+                Crafting <span class="text-gradient">the core</span> of <br>
+                Creators' <span class="text-gradient">Economy</span>.
+            </h1>
+            <p class="lead text-secondary mb-5 hero-subtitle mx-auto">
+                We are the bridge between brands and the most influential voices of tomorrow.
+            </p>
+            <div class="hero-btns">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal"
+                    class="btn btn-custom-lg rounded-pill px-5 py-3 fw-bold">
+                    Get In Touch <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- "What Defines Us" Section -->
+    <section id="about" class="py-5 section-padding position-relative overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0 z-2">
+                    <h2 class="display-3 fw-bold mb-4">What <br><span class="text-secondary-subtle">Defines Us</span>
+                    </h2>
+                    <p class="text-secondary fs-5 mb-5 about-text">
+                        We craft compelling narratives and build strong, impactful partnerships that set new standards
+                        in the Indian creator economy.
+                    </p>
+                    <a href="#" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">Dive Into Our Culture</a>
+                </div>
+                <div class="col-lg-7 position-relative">
+                    <!-- Decorative Lines -->
+                    <div class="dotted-line-decoration"></div>
+
+                    <!-- Floating Mapmaker Card -->
+                    <div class="mapmaker-card p-4 p-md-5 rounded-4 position-absolute z-3 shadow-lg">
+                        <h3 class="fw-bold text-black h4">We are the mapmakers of the content realm, navigating the
+                            digital landscape since its wild west days.</h3>
+                    </div>
+
+                    <!-- Team Image -->
+                    <div class="team-image-wrapper rounded-5 overflow-hidden ms-auto">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Team" class="img-fluid w-100 h-100 object-fit-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- "Work" Slider Section -->
+    <section id="work" class="py-5 section-padding bg-black">
+        <div class="container-fluid pe-0">
+            <div class="row mb-5 ps-lg-5">
+                <div class="col-12 ps-lg-4">
+                    <h6 class="text-primary-custom text-uppercase letter-spacing-2 mb-2">Our Work</h6>
+                    <h2 class="display-4 fw-bold">Featured Projects</h2>
+                </div>
+            </div>
+
+            <!-- Swiper Slider -->
+            <div class="swiper workSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="work-card">
+                            <div class="work-img rounded-5 overflow-hidden mb-4 position-relative">
+                                <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    class="w-100 h-100 object-fit-cover" alt="Tech Burner">
+                                <div
+                                    class="work-overlay position-absolute bottom-0 start-0 w-100 p-4 d-flex align-items-end justify-content-between">
+                                    <div class="text-start">
+                                        <h3 class="fw-bold mb-0 text-white">Tech Burner</h3>
+                                        <p class="text-white-50 small text-uppercase mb-0">Talent Management</p>
+                                    </div>
+                                    <span class="btn btn-custom rounded-circle p-3"><i
+                                            class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="work-card">
+                            <div class="work-img rounded-5 overflow-hidden mb-4 position-relative">
+                                <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    class="w-100 h-100 object-fit-cover" alt="Audi">
+                                <div
+                                    class="work-overlay position-absolute bottom-0 start-0 w-100 p-4 d-flex align-items-end justify-content-between">
+                                    <div class="text-start">
+                                        <h3 class="fw-bold mb-0 text-white">Audi</h3>
+                                        <p class="text-white-50 small text-uppercase mb-0">Influencer Marketing</p>
+                                    </div>
+                                    <span class="btn btn-custom rounded-circle p-3"><i
+                                            class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="work-card">
+                            <div class="work-img rounded-5 overflow-hidden mb-4 position-relative">
+                                <img src="https://images.unsplash.com/photo-1611162617263-4ec3060a058e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    class="w-100 h-100 object-fit-cover" alt="Netflix">
+                                <div
+                                    class="work-overlay position-absolute bottom-0 start-0 w-100 p-4 d-flex align-items-end justify-content-between">
+                                    <div class="text-start">
+                                        <h3 class="fw-bold mb-0 text-white">Netflix</h3>
+                                        <p class="text-white-50 small text-uppercase mb-0">Brand Collaboration</p>
+                                    </div>
+                                    <span class="btn btn-custom rounded-circle p-3"><i
+                                            class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="work-card">
+                            <div class="work-img rounded-5 overflow-hidden mb-4 position-relative">
+                                <img src="https://images.unsplash.com/photo-1614680376593-902f74cf0d41?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    class="w-100 h-100 object-fit-cover" alt="Spotify">
+                                <div
+                                    class="work-overlay position-absolute bottom-0 start-0 w-100 p-4 d-flex align-items-end justify-content-between">
+                                    <div class="text-start">
+                                        <h3 class="fw-bold mb-0 text-white">Spotify</h3>
+                                        <p class="text-white-50 small text-uppercase mb-0">Creator Campaign</p>
+                                    </div>
+                                    <span class="btn btn-custom rounded-circle p-3"><i
+                                            class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination mt-4 position-relative"></div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-custom rounded-pill px-5 py-2 fw-bold">View All</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-5 bg-black">
+        <div class="container py-5">
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <h2 class="display-3 fw-bold mb-3 counter">10000+</h2>
+                    <p class="text-secondary text-uppercase fw-semibold">Creators<br>Collaborated With</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="display-3 fw-bold mb-3 counter">330+</h2>
+                    <p class="text-secondary text-uppercase fw-semibold">Creators<br>Exclusively Managed</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="display-3 fw-bold mb-3 counter">850+</h2>
+                    <p class="text-secondary text-uppercase fw-semibold">Bankable<br>Campaigns Executed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section 2.0 (Matched to Design) -->
+    <section id="services" class="py-5 section-padding bg-black">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold">Here's What We Bring to the Table</h2>
+                <p class="text-secondary">Our Services: From Idea to Impact</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Service 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card-v3">
+                        <div class="card-top">
+                            <span class="card-number">01</span>
+                        </div>
+                        <div class="card-body-custom text-center">
+                            <h4 class="fw-bold">Influencer Marketing</h4>
+                            <p class="text-secondary small mb-4">Step into the realm of unparalleled brand
+                                collaborations and transformative campaigns with EchoX Media.</p>
+                            <a href="#" class="btn btn-custom w-100 rounded-pill fw-bold">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card-v3">
+                        <div class="card-top card-top-alt">
+                            <span class="card-number">02</span>
+                        </div>
+                        <div class="card-body-custom text-center">
+                            <h4 class="fw-bold">Talent Management</h4>
+                            <p class="text-secondary small mb-4">Welcome to the beating heart of creator empowerment. A
+                                sanctuary for creators seeking holistic growth.</p>
+                            <a href="#" class="btn btn-custom w-100 rounded-pill fw-bold">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card-v3">
+                        <div class="card-top">
+                            <span class="card-number">03</span>
+                        </div>
+                        <div class="card-body-custom text-center">
+                            <h4 class="fw-bold">Creator Led Business</h4>
+                            <p class="text-secondary small mb-4">Embark on a transformative journey of entrepreneurship
+                                with Creator Led Brands.</p>
+                            <a href="#" class="btn btn-custom w-100 rounded-pill fw-bold">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-card-v3">
+                        <div class="card-top card-top-alt">
+                            <span class="card-number">04</span>
+                        </div>
+                        <div class="card-body-custom text-center">
+                            <h4 class="fw-bold">Personal Branding</h4>
+                            <p class="text-secondary small mb-4">Your brand is not confined to a niche; instead, we
+                                craft a narrative that spans across facets.</p>
+                            <a href="#" class="btn btn-custom w-100 rounded-pill fw-bold">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-5 pb-4 position-relative overflow-hidden">
+        <div class="container py-5 rounded-5 mt-4 custom-footer-bg">
+            <div class="row align-items-center text-center justify-content-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">Elevate Your Influence with EchoX Media!</h2>
+                    <p class="text-secondary mb-4">Explore, Collaborate, Innovate, and Achieve</p>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal"
+                        class="btn btn-custom rounded-pill px-5 py-3 fw-bold fs-5">Let's Collaborate</a>
+                </div>
+            </div>
+
+            <div class="row pt-5 align-items-end">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h6 class="fw-bold text-white mb-2">Work with us</h6>
+                    <p class="text-secondary small mb-4">Be a part of the team</p>
+
+                    <h6 class="fw-bold text-white mb-2">Contact Us</h6>
+                    <p class="text-secondary small mb-4">Contact@echox.in</p>
+
+                    <h6 class="fw-bold text-white mb-2">Follow Us</h6>
+                    <div class="social-links d-flex gap-3">
+                        <a href="#"
+                            class="btn btn-secondary p-2 rounded-2 d-flex align-items-center justify-content-center"
+                            style="width:40px; height:40px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="btn btn-secondary p-2 rounded-2 d-flex align-items-center justify-content-center"
+                            style="width:40px; height:40px;"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <p class="text-secondary small">
+                        Metro Station-Saket, 241, Westend Marg,<br>
+                        Saidulajab, Butterfly Park, Mittal Garden, Saket,<br>
+                        New Delhi, Delhi
+                    </p>
+                    <p class="text-secondary small mt-3">
+                        1100301st Floor, Peninsula Park, Veera Desai<br>
+                        Industrial Estate, Andheri West, Mumbai,<br>
+                        Maharashtra 400047
+                    </p>
+                </div>
+
+                <div class="col-lg-3 text-lg-end">
+                    <!-- Logo Placeholder -->
+                    <h1 class="footer-brand text-white m-0 lh-1">ECHOX<br>MEDIA.</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <p class="text-secondary small">&copy; 2026 EchoX Media. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark-glass rounded-5 overflow-hidden">
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-lg-5 d-none d-lg-flex modal-left-panel p-5 text-black flex-column">
+                            <h2 class="display-5 fw-bold mb-4">Let's build something <br> legendary.</h2>
+                            <p class="mb-5 opacity-75 fw-medium">Ready to take your brand or creative journey to the
+                                next level? Our team is standing by.</p>
+
+                            <div class="mt-auto position-relative z-1">
+                                <div class="mb-4">
+                                    <h6 class="fw-bold mb-1">Email us</h6>
+                                    <p class="mb-0 fs-5 fw-semibold">hello@echox.in</p>
+                                </div>
+
+                                <h6 class="fw-bold mb-2">Follow the vibe</h6>
+                                <div class="d-flex gap-4">
+                                    <a href="#" class="text-black"><i class="fab fa-instagram fs-3"></i></a>
+                                    <a href="#" class="text-black"><i class="fab fa-linkedin fs-3"></i></a>
+                                    <a href="#" class="text-black"><i class="fab fa-twitter fs-3"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 p-5 position-relative">
+                            <div class="d-flex justify-content-between align-items-center mb-5">
+                                <h3 class="display-6 fw-bold m-0" id="contactModalLabel">Contact Us</h3>
+                                <button type="button" class="btn-close-custom" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="form-label small text-secondary text-uppercase ls-1">Full Name</label>
+                                    <input type="text" class="form-control custom-input" placeholder="e.g. Alex Hunter">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label small text-secondary text-uppercase ls-1">Email
+                                        Address</label>
+                                    <input type="email" class="form-control custom-input" placeholder="alex@agency.com">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label small text-secondary text-uppercase ls-1">Your
+                                        Vision</label>
+                                    <textarea class="form-control custom-input" rows="4"
+                                        placeholder="Tell us about your next big thing..."></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-custom btn-glow w-100 py-3 rounded-pill fw-bold fs-5 shadow-lg">
+                                    Send Message <i class="fas fa-paper-plane ms-2"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

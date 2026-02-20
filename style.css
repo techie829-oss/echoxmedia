@@ -1,0 +1,646 @@
+/* Global Styles */
+:root {
+    --primary-color: #FFD200;
+    /* Updated Rapido Yellow */
+    --secondary-color: #FFDA33;
+    /* Gold/Lighter Yellow */
+    --dark-bg: #111111;
+    /* Main Background */
+    --darker-bg: #000000;
+    /* Darker Background */
+    --text-muted: #B3B3B3;
+    /* Grey Text */
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Typography Utilities */
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), #FFF0A8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+.bg-dark-grey {
+    background-color: #1a1a1a;
+}
+
+/* Navbar specific */
+.navbar {
+    background: rgba(17, 17, 17, 0.85);
+    /* Semi-transparent dark */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Custom Buttons */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: #000;
+    /* Black text on yellow for contrast */
+    border: none;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-custom:hover {
+    background-color: #e6bd00;
+    /* Slightly darker yellow */
+    transform: translateY(-2px);
+    color: #000;
+}
+
+.btn-custom-lg {
+    background: linear-gradient(45deg, var(--primary-color), #FFE066);
+    border: none;
+    color: #000;
+    /* Black text */
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 210, 0, 0.4);
+}
+
+.btn-custom-lg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 210, 0, 0.6);
+    color: #000;
+}
+
+.btn-link-custom {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+}
+
+.btn-link-custom:hover {
+    gap: 0.8rem;
+    color: var(--secondary-color);
+}
+
+/* Page Spacer for Fixed Navbar */
+.pt-custom-header {
+    padding-top: 150px !important;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    /* Offset for fixed navbar */
+    position: relative;
+}
+
+.hero-bg-gradient {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 210, 0, 0.15) 0%, rgba(17, 17, 17, 0) 70%);
+    z-index: 0;
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.hero-title {
+    line-height: 1.1;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    /* Fluid Typography */
+}
+
+.hero-subtitle {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+}
+
+/* Marquee Text */
+.marquee-text {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 20s linear infinite;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Mapmaker / About Section */
+.dotted-line-decoration {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border-left: 2px dashed rgba(255, 255, 255, 0.2);
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about-text {
+    max-width: 450px;
+}
+
+.mapmaker-card {
+    background-color: var(--primary-color);
+    box-shadow: 0 20px 50px rgba(255, 210, 0, 0.3);
+    border: 2px solid var(--white);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+    top: -10%;
+    left: -10%;
+    max-width: 400px;
+}
+
+.mapmaker-card:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.team-image-wrapper {
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 85%;
+    aspect-ratio: 4/3;
+}
+
+/* Services V2 */
+.service-card-v2 {
+    background: #1a1a1a;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-card-v2:hover {
+    background: #222;
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+/* Work Slider */
+/* Swiper Custom Styles */
+.workSwiper {
+    padding: 20px 20px 60px !important;
+    overflow: visible !important;
+    /* Allow slides to be seen as they come in */
+}
+
+.workSwiper .swiper-slide {
+    width: 400px !important;
+    /* Fixed width for attractive card sizing */
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.2) !important;
+    opacity: 1 !important;
+    width: 12px !important;
+    height: 12px !important;
+    transition: all 0.3s ease !important;
+    margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color) !important;
+    width: 30px !important;
+    border-radius: 6px !important;
+}
+
+.work-card {
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.work-img {
+    height: 500px !important;
+    /* Taller and more attractive */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #111;
+}
+
+.work-img img {
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.work-card:hover .work-img img {
+    transform: scale(1.1);
+}
+
+.work-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+    opacity: 1 !important;
+    /* Always visible but subtle at top */
+    transition: all 0.4s ease;
+}
+
+.work-card:hover .work-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.work-overlay .btn-custom {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.work-card:hover .work-overlay .btn-custom {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Footer Custom */
+.custom-footer-bg {
+    background-color: #0F0F0F;
+    /* Slightly different from body for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-brand {
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 800;
+}
+
+.social-links .btn-secondary {
+    background-color: #222;
+    border: none;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.social-links .btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+/* Services Cards */
+.service-card {
+    background: #0a0a0a;
+    /* Slightly darker than body for card bg */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px -10px rgba(116, 84, 251, 0.2);
+}
+
+.text-dark-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    color: transparent;
+    font-size: 6rem;
+    line-height: 1;
+    z-index: 0;
+}
+
+/* Footer Links */
+footer a.text-secondary:hover {
+    color: var(--white) !important;
+}
+
+.social-links a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-3px);
+    display: inline-block;
+}
+
+/* Animation Helper Classes (for use with GSAP) */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+/* Service Card V3 - Safe & Visible Design */
+.service-card-v3 {
+    background: #111111 !important;
+    border-radius: 40px !important;
+    overflow: hidden !important;
+    height: 100% !important;
+    transition: transform 0.3s ease !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 500px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.service-card-v3:hover {
+    transform: translateY(-10px) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.card-top {
+    height: 220px !important;
+    background: #1a1a1a !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-bottom-left-radius: 60px !important;
+    border-bottom-right-radius: 60px !important;
+    margin-bottom: 25px !important;
+    /* Simple rounded instead of clip-path for safety */
+    clip-path: none !important;
+}
+
+.card-top-alt {
+    border-bottom-left-radius: 120px !important;
+    border-bottom-right-radius: 120px !important;
+}
+
+.card-number {
+    font-size: 9rem !important;
+    font-weight: 900 !important;
+    color: #222222 !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 0 !important;
+    line-height: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.card-body-custom {
+    padding: 0 35px 45px !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.card-body-custom h4 {
+    color: var(--primary-color) !important;
+    /* Rapido Yellow */
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+}
+
+.card-body-custom p {
+    color: #888888 !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+}
+
+/* Rapido Yellow Button */
+.service-card-v3 .btn-custom {
+    background: var(--primary-color) !important;
+    color: #000 !important;
+    /* Black text on yellow for better contrast */
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 15px !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Stats Styling */
+#stats {
+    background-color: #000000 !important;
+    padding: 100px 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#stats .counter {
+    font-size: 5.5rem !important;
+    font-weight: 800 !important;
+    color: var(--white) !important;
+    margin-bottom: 15px !important;
+    background: linear-gradient(to right, var(--white), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#stats p {
+    color: #737373 !important;
+    letter-spacing: 2px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+}
+
+/* Modal & Form Styling */
+.bg-dark-glass {
+    background: rgba(10, 10, 10, 0.98) !important;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0 0 50px rgba(255, 210, 0, 0.15) !important;
+    border: 1px solid rgba(255, 210, 0, 0.2) !important;
+    animation: modalGlow 3s infinite alternate;
+}
+
+@keyframes modalGlow {
+    from {
+        box-shadow: 0 0 40px rgba(255, 210, 0, 0.1);
+    }
+
+    to {
+        box-shadow: 0 0 70px rgba(255, 210, 0, 0.25);
+    }
+}
+
+.modal-content {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.modal-left-panel {
+    background-color: var(--primary-color) !important;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-left-panel::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.custom-input {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: white !important;
+    padding: 15px 20px !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    border-radius: 15px !important;
+}
+
+.custom-input:focus {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 10px 30px rgba(255, 210, 0, 0.1) !important;
+    outline: none !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.form-label {
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Fancy Close button */
+.btn-close-custom {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.btn-close-custom:hover {
+    background: var(--primary-color);
+    color: black;
+    transform: rotate(90deg);
+}
+
+/* Animated Button */
+.btn-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    transition: 0.6s;
+    pointer-events: none;
+}
+
+.btn-glow:hover::before {
+    left: 100%;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease !important;
+}
+
+.hover-scale:hover {
+    transform: scale(1.2) !important;
+    color: var(--white) !important;
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-color) !important;
+}
